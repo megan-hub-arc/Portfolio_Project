@@ -332,6 +332,7 @@ section {
     background-color: #444;
 }
 
+/* original responsive design also for desktop */
 @media (max-width: 600px) {
     .intro-container {
         flex-direction: column;
@@ -343,5 +344,79 @@ section {
 
     .skills-container {
         grid-template-columns: 1fr;
+    }
+}
+
+
+/*activity 8: responsive web design */
+/* tablet screens */
+@media (max-width: 900px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .intro-container {
+        gap: 25px;
+    }
+
+    .project-card {
+        flex: 1 1 260px;
+    }
+}
+
+
+/* mobile screens */
+@media (max-width: 600px) {
+    .navbar {
+        gap: 12px;
+        padding: 14px 10px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .intro {
+        min-height: auto;
+        padding: 80px 20px;
+    }
+
+    .intro-container {
+        flex-direction: column;
+    }
+
+    .intro-text {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .about h2,
+    .skills h2,
+    .projects h2,
+    .experience h2,
+    .contact h2 {
+        font-size: 28px;
+    }
+
+    .experience th,
+    .experience td {
+        padding: 12px;
     }
 }
