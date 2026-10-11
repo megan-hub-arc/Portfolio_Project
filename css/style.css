@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -9,6 +10,12 @@ body {
     color: #222;
 }
 
+.intro-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 .intro {
     min-height: 100vh;
     display: flex;
@@ -17,6 +24,13 @@ body {
     align-items: center;
     text-align: center;
     padding: 40px 20px;
+}
+
+.intro-text {
+    text-align: left;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .profile-photo {
@@ -38,11 +52,10 @@ h1 {
     margin: 10px 0;
 }
 
-.intro p:last-child {
+.intro-text > p:not(.tagline) {
     max-width: 600px;
     line-height: 1.6;
 }
-
 
 .cta-button {
     display: inline-block;
@@ -55,9 +68,6 @@ h1 {
     font-weight: bold;
 }
 
-
-
-
 .cta-button:hover {
     opacity: 0.8;
 }
@@ -66,6 +76,12 @@ h1 {
     padding: 80px 20px;
     max-width: 800px;
     margin: 0 auto;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .about h2 {
@@ -84,8 +100,8 @@ h1 {
     font-size: 16px;
 }
 
-
 .skills {
+    text-align: center;
     padding: 80px 20px;
     max-width: 1000px;
     margin: 0 auto;
@@ -99,11 +115,12 @@ h1 {
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
 .skill-card {
+    text-align: center;
     padding: 25px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -111,16 +128,26 @@ h1 {
 }
 
 .skill-card h3 {
+    text-align: center;
     margin-top: 0;
     font-size: 21px;
 }
 
 .skill-card p {
+    text-align: center;
     line-height: 1.6;
     margin-bottom: 0;
 }
 
 @media (max-width: 600px) {
+    .intro-container {
+        flex-direction: column;
+    }
+
+    .intro-text {
+        text-align: center;
+    }
+
     .skills-container {
         grid-template-columns: 1fr;
     }
