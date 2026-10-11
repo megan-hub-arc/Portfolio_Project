@@ -203,6 +203,46 @@ h1 {
 }
 
 
+.experience {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.experience h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.experience table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.experience th,
+.experience td {
+    border: 1px solid #ddd;
+    padding: 16px;
+    text-align: left;
+}
+
+.experience th {
+    background-color: #222;
+    color: white;
+}
+
+.experience tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+
 @media (max-width: 600px) {
     .intro-container {
         flex-direction: column;
